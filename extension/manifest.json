@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Prio",
+  "version": "0.1.0",
+  "description": "Clasifica tus emails de soporte con IA — área, urgencia y respuesta sugerida en un click.",
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Prio"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
